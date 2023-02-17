@@ -30,10 +30,12 @@ function App() {
       <div id="range-a-holder">
         <label htmlFor="range-a">Range A:</label>
         <input type="range" id="range-a" min="0" max={Math.min(rangeB, maxSum)} value={rangeA} onChange={handleRangeAChange} />
+        <div id="range-a-value">{rangeA}</div>
       </div>
       <div id="range-b-holder">
         <label htmlFor="range-b">Range B:</label>
         <input type="range" id="range-b" min={Math.max(rangeA, 0)} max={maxSum} value={rangeB} onChange={handleRangeBChange} />
+        <div id="range-b-value">{rangeB}</div>
       </div>
       <div id="sum">{rangeA + rangeB}</div>
     </div>
@@ -41,4 +43,3 @@ function App() {
 }
 
 export default App;
-
